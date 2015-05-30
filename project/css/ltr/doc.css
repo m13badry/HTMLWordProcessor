@@ -1,0 +1,53 @@
+body {counter-reset: level1 0 picture 0;margin:0; }
+h1 {counter-reset: level2;}
+h1:before {counter-increment: level1;content: counter(level1) ". ";}
+h2 {counter-reset: level3;}
+h2:before {counter-increment: level2;content: counter(level1) "." counter(level2) " ";}
+h3 {counter-reset: level4;}
+h3:before {counter-increment: level3;content: counter(level1) "." counter(level2) "." counter(level3) " ";}
+h4 {counter-reset: level5;}
+h4:before {counter-increment: level4;content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) " ";}
+h5 {counter-reset: level6;}
+h5:before {counter-increment: level5;content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) " ";}
+h6:before {counter-increment: level6;content: counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5)  "." counter(level6) " ";}
+
+h1 {font-size:18pt; color:navy; font-family: "Century Gothic"; margin:10px 0}
+h2 {font-size:16pt; color:black; font-family: "Century Gothic"; margin:10px 0}
+h3 {font-size:14pt; color:maroon; font-family: "Century Gothic"; margin:10px 0}
+h4 {font-size:12pt; color:#333; font-family: "Century Gothic"; margin:10px 0}
+h5 {font-size:11pt; color:navy; font-family: "Century Gothic"; margin:10px 0}
+p, ul, li {font-family: "calibri"; font-size:11pt}
+p {line-height: 14pt;}
+table {font-family:'calibri'; font-size:11pt; width:100%}
+table tr th {border:solid 3px #fff; background-color:#E4E4E4; padding:5px}
+table tr td {border:solid 3px #fff; background-color:#E4E4E4; padding:5px}
+ul {list-style-type: square; }
+ul li {margin:0 20px 0; }
+ol {list-style: decimal;}
+ol li {margin:0 20px 0;}
+.start {counter-reset: list;}
+.start ol {list-style: none;}
+.start ol>li {counter-increment: list; margin:0}
+.start ol>li:before  {content: counter(list) ".     " }
+.start ul {margin:0px 10px}
+.continue>li:before {content: counter(list) ".  " }
+.page-break {page-break-before: always;}
+article .addressed-to {font: 11pt "calibri";color: #999;}
+article .company {font: 13pt "century gothic";}
+article {margin-top: 250px}
+article table {margin-bottom: 80px;}
+article table tr td {background-color:transparent; border: solid 3px #666}
+article .project-title {font: 36pt "century gothic"; color: navy; text-transform: capitalize;}
+article .doc-name {display:block; font: 20pt "century gothic"; color: #000}
+article .doc-version {display:block; font: 14pt "century gothic"; color: #333}
+article .doc-date {display:block; font: 12pt "century gothic"; color: #333}
+article .doc-disclaimer {font: 10pt "century gothic"; color: #666}
+article .address {display:block; font: 16pt "century gothic"; color: #000}
+article img.logo {width:200px}
+article a {display:block; font: 12pt "century gothic"; color: blue; text-decoration: none;}
+span.caption {font:10pt "century gothic"; color:#333; display:block;counter-increment:picture}
+span.caption strong {font-weight: bold;}
+span.caption strong:after {content: counter(picture) ':'}
+bold {font-weight: bold;}
+@page {counter-reset: page;}
+.pagenum:before { content: counter(page);}

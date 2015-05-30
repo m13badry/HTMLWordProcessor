@@ -1,0 +1,59 @@
+body{counter-reset:level1 0 picture 0;margin:0}
+h1{counter-reset:level2}
+h1:before{counter-increment:level1;content:counter(level1) ". "}
+h2{counter-reset:level3}
+h2:before{counter-increment:level2;content:counter(level1) "." counter(level2) " "}
+h3{counter-reset:level4}
+h3:before{counter-increment:level3;content:counter(level1) "." counter(level2) "." counter(level3) " "}
+h4{counter-reset:level5}
+h4:before{counter-increment:level4;content:counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) " "}
+h5{counter-reset:level6}
+h5:before{counter-increment:level5;content:counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) " "}
+h6:before{counter-increment:level6;content:counter(level1) "." counter(level2) "." counter(level3) "." counter(level4) "." counter(level5) "." counter(level6) " "}
+h1{font-size:18pt;color:navy;font-family:Arial;margin:10px 0}
+h2{font-size:16pt;color:#000;font-family:Arial;margin:10px 0}
+h3{font-size:14pt;color:maroon;font-family:Arial;margin:10px 0}
+h4{font-size:12pt;color:#333;font-family:Arial;margin:10px 0}
+h5{font-size:11pt;color:navy;font-family:Arial;margin:10px 0}
+li,p,ul{font-family:tahoma;font-size:11pt;line-height:14pt}
+p{line-height:14pt}
+table{font-family:calibri;font-size:11pt;width:100%}
+table tr td,table tr th{border:3px solid #fff;background-color:#E4E4E4;padding:5px}
+ul{list-style-type:square}
+ul li{margin:0 20px}
+ol{list-style:decimal}
+ol li{margin:0 20px}
+.start{counter-reset:list}
+.start ol{list-style:none}
+.start ol>li{counter-increment:list;margin:0}
+.start ol>li:before{content:counter(list) ".     "}
+.start ul{margin:0 10px}
+.continue>li:before{content:counter(list) ".  "}
+.page-break{page-break-before:always}
+article .addressed-to{font:11pt calibri;color:#999}
+article .company{font:13pt "century gothic"}
+article{margin-top:250px}
+article table{margin-bottom:80px}
+article table tr td{background-color:transparent;border:3px solid #666}
+article .project-title{font:36pt "century gothic";color:navy;text-transform:capitalize}
+article .doc-name{display:block;font:20pt "century gothic";color:#000}
+article .doc-version{display:block;font:14pt "century gothic";color:#333}
+article .doc-date{display:block;font:12pt "century gothic";color:#333}
+article .doc-disclaimer{font:10pt "century gothic";color:#666}
+article .address{display:block;font:16pt "century gothic";color:#000}
+article img.logo{width:200px}
+article a{display:block;font:12pt "century gothic";color:#00f;text-decoration:none}
+article div.title {font-size: 28px;text-align: center;margin: 40px 0px;}
+article div.sub-title {font-size: 24px;text-align: center;margin: 20px 0px;}
+article div.partner-1 {font-size: 18px;margin: 60px 0px;line-height: 30px}
+article div.partner-2 {font-size: 18px;text-align: left;margin: 40px 0px;line-height: 30px;}
+article div.signature {font-size: 16px;margin: 20px 0px;margin-top:450px;}
+span.caption{font:10pt "century gothic";color:#333;display:block;counter-increment:picture}
+span.caption strong{font-weight:700}
+span.caption strong:after{content:counter(picture) ':'}
+bold{font-weight:700}
+@page{counter-reset:page}
+.pagenum:before{content:counter(page)}
+header{position:fixed;top:0}
+footer{position:fixed;bottom:0}
+
